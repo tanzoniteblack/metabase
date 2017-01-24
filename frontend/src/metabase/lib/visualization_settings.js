@@ -137,6 +137,13 @@ const SETTINGS = {
         dashboard: true,
         useRawSeries: true
     },
+    "card.description": {
+        title: "Description",
+        widget: ChartSettingInput,
+        getDefault: (series) => series.length === 1 ? series[0].card.description : null,
+        dashboard: true,
+        useRawSeries: true
+    },
     "graph._dimension_filter": {
         getDefault: ([{ card }]) => card.display === "scatter" ? isAnyField : isDimension,
         useRawSeries: true

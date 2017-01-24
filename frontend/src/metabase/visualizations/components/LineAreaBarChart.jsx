@@ -180,6 +180,7 @@ export default class LineAreaBarChart extends Component {
                     <LegendHeader
                         className="flex-no-shrink"
                         series={titleHeaderSeries}
+                        description={settings["card.description"]}
                         actionButtons={actionButtons}
                     />
                 : null }
