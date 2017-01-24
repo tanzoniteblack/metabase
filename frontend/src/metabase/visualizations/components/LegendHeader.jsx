@@ -58,6 +58,7 @@ export default class LegendHeader extends Component {
                     <LegendItem
                         key={index}
                         title={s.card.name}
+                        description={s.card.description}
                         href={s.card.id && Urls.card(s.card.id)}
                         color={colors[index % colors.length]}
                         showDot={showDots}
