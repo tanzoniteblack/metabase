@@ -220,6 +220,7 @@ export default class Visualization extends Component {
                                     series
                             }
                             actionButtons={extra}
+                            description={settings["card.description"]}
                             settings={settings}
                         />
                     </div>
