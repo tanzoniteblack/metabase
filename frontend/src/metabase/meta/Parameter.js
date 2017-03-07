@@ -4,7 +4,7 @@ import type { TemplateTag } from "./types/Query";
 import type { Parameter } from "./types/Dashboard";
 
 export function getTemplateTagParameters(tags: TemplateTag[]): Parameter[] {
-    return tags.filter(tag => tag.type != null && tag.type !== "dimension")
+    return tags.filter(tag => tag.type != null)
         .map(tag => ({
             id: tag.id,
             type: tag.type === "date" ? "date/single" : "category",
@@ -12,5 +12,5 @@ export function getTemplateTagParameters(tags: TemplateTag[]): Parameter[] {
             name: tag.display_name,
             slug: tag.name,
             default: tag.default
-        }))
+        }));
 }
